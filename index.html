@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Community Library</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <header>
+        <h1>Community Library</h1>
+        <p>Books, requests and Route 42 public transport information</p>
+    </header>
+
+    <nav aria-label="Main navigation">
+        <a href="#books">Book Requests</a>
+        <a href="#timetable">Route 42 Timetable</a>
+        <a href="#bus-stop">Bus Stop</a>
+    </nav>
+
+    <main>
+        <section id="books">
+            <h2>Book Request</h2>
+
+            <form id="book-request-form">
+                <label for="book-title">Book title</label>
+                <input
+                    type="text"
+                    id="book-title"
+                    name="book-title"
+                    required
+                >
+
+                <label for="requester-name">Your name</label>
+                <input
+                    type="text"
+                    id="requester-name"
+                    name="requester-name"
+                    required
+                >
+
+                <button type="submit">Request Book</button>
+            </form>
+
+            <p id="request-message" aria-live="polite"></p>
+        </section>
+
+        <section id="timetable">
+            <h2>Route 42 Timetable</h2>
+
+            <table>
+                <caption>Route 42 Bus Timetable</caption>
+                <thead>
+                    <tr>
+                        <th scope="col">Stop</th>
+                        <th scope="col">Morning</th>
+                        <th scope="col">Afternoon</th>
+                        <th scope="col">Evening</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th scope="row">Central Library</th>
+                        <td>08:00</td>
+                        <td>13:00</td>
+                        <td>18:00</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Market Road</th>
+                        <td>08:15</td>
+                        <td>13:15</td>
+                        <td>18:15</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">City Centre</th>
+                        <td>08:30</td>
+                        <td>13:30</td>
+                        <td>18:30</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Bus Station</th>
+                        <td>08:45</td>
+                        <td>13:45</td>
+                        <td>18:45</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <section id="bus-stop">
+            <h2>Route 42 Bus Stop</h2>
+
+            <figure>
+                <img
+                    src="images/bus-stop.svg"
+                    alt="Route 42 bus stop"
+                >
+                <figcaption>Route 42 public transport stop</figcaption>
+            </figure>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Community Library</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
